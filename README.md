@@ -1,6 +1,6 @@
 # Unix Shell Programming
 
-This repository holds the material for the seminar on `Unix Shell Programming` organized by the Department of Industrial Engineering of the University of Bologna. Use this material to follow along with the seminar and to practice the concepts discussed.
+This repository holds the material for the seminar on `Unix Shell Programming` organized by the Department of Industrial Engineering of the University of Trento. Use this material to follow along with the seminar and to practice the concepts discussed.
 
 ## Pre-requisites
 
@@ -49,7 +49,7 @@ The outline of the seminar is as follows:
 
 Many resources are available online to learn Unix shell programming. Here are a few to get you started:
 
-- [Getting Started With Linux Terminal](https://linuxhandbook.com/bash/)
+- [Getting Started With Linux Terminal](https://itsfoss.com/linux-terminal-basics/)
 - [Start Learning Bash](https://linuxhandbook.com/bash/)
 - [The Shell Scripting Tutorial](https://www.shellscript.sh)
 - [Shell Programming Tutorial](https://www.learnshell.org)
