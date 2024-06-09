@@ -34,9 +34,15 @@ The outline of the seminar is as follows:
    - Basic Unix Commands
    - Shell Scripting Basics
 2. **Unix Shell Programming pt. 1**
-   - ???
+   - Creating and running shell scripts
+   - Variables
+   - Arithmetic operations
+   - Passing arguments to scripts
 3. **Unix Shell Programming pt. 2**
-   - ???
+   - Conditional statements
+   - Loops
+   - Arrays
+   - Functions
 4. **Real-world applications**
    - ???
 5. **Exam**
