@@ -167,3 +167,5 @@ for file in $files; do
     echo "$file"
 done
 ```
+
+The `find` command is used to search for files in the specified directory. We are using the `-type f` option to only list regular files. The list of files is stored in the `files` variable, and we are iterating over each file to print it. Note that `find` will recursively search for files in subdirectories as well.
