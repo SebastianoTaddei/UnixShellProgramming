@@ -1,3 +1,4 @@
+<div style="text-align:center">
 <img
     style="display: block;
            margin-left: auto;
@@ -6,6 +7,7 @@
     src="./logo.png"
     alt="Unix Shell Programming">
 </img>
+</div>
 
 # Unix Shell Programming
 
