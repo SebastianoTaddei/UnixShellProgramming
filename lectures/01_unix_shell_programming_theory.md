@@ -1,4 +1,4 @@
-# Unix Shell Programming
+# Unix Shell Programming: Theory
 
 We will break down the basics of Unix Shell Programming into the following topics:
 
