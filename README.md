@@ -1,15 +1,9 @@
-<div style="text-align:center">
-<img
-    style="display: block;
-           margin-left: auto;
-           margin-right: auto;
-           width: 20%;"
-    src="./logo.png"
-    alt="Unix Shell Programming">
-</img>
-</div>
-
 # Unix Shell Programming
+
+<p align="center">
+<img src="./logo.png" alt="Unix Shell Programming" width=180px>
+</img>
+</p>
 
 This repository holds the material for the seminar on `Unix Shell Programming` organized by the Department of Industrial Engineering of the University of Trento. Use this material to follow along with the seminar and to practice the concepts discussed.
 
