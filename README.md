@@ -33,23 +33,23 @@ The outline of the seminar is as follows:
    - Introduction to Unix
    - Basic Unix Commands
    - Shell Scripting Basics
-2. **Unix Shell Programming pt. 1**
+2. **Unix Shell Programming: theory**
    - Creating and running shell scripts
    - Variables
    - Arithmetic operations
    - Passing arguments to scripts
-3. **Unix Shell Programming pt. 2**
+   - Arrays
    - Conditional statements
    - Loops
-   - Arrays
    - Functions
+3. **Unix Shell Programming: hands-on practice**
+   - ???
 4. **Real-world applications**
    - ???
 5. **Exam**
    - The exam will consist of 30 multiple-choice questions that you will have to answer in 60 minutes. The questions will be based on the following sessions:
      - Introduction to Unix Shell Programming
-     - Unix Shell Programming pt. 1
-     - Unix Shell Programming pt. 2
+     - Unix Shell Programming: theory
 
 ## Resources
 
