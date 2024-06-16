@@ -154,3 +154,16 @@ Organizing files in directory: /path/to/directory
 ```
 
 We are now ready to move to the next step.
+
+### Step 2: List all files in the directory
+
+We are now going to list all files in the directory. Modify the script to include the following code:
+
+```bash
+...
+files=$(find "$1" -type f)
+echo "Found files:"
+for file in $files; do
+    echo "$file"
+done
+```
