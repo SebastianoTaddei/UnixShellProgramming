@@ -442,7 +442,7 @@ Whilst the `for` loop is useful when you know the number of iterations beforehan
 As in any other programming language, functions allow you to write reusable code. In `bash`, you can also define functions, but they are a bit different from other programming languages. The general syntax of a function is as follows:
 
 ```bash
-function_name() {
+function_name () {
     # code block
 }
 ```
@@ -552,3 +552,7 @@ This function calculates the factorial of a number using recursion. Running this
 ## 9 Conclusion
 
 After looking at all these simple examples, I believe that if you have any prior programming experience with languages like `C/C++`, `Python`, `Rust`, etc., you might be wondering "The syntax of `bash` looks a little clunky, doing solving classical problems (*e.g.,* network programming, scientific computing) looks horrible, and it does not seem as powerful as other languages, why should I learn it?". The answer to that is simple: `bash` is not meant to be like other programming languages, it does not try to solve those problems. `bash` is meant to be the glue between other processes, interacting with your system and automating tasks. You can use other languages to solve this problems, `Python` has a first-party library to call processes on your system, but you will find that it feels unnatural. That is why, after this theoretical part of Unix Shell Programming, we will move to the practical part, where we will see how to use `bash` to do what it does best: interacting with your system.
+
+## 10 References
+
+- [Start Learning Bash](https://linuxhandbook.com/bash/)

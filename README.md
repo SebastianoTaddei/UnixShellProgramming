@@ -22,13 +22,12 @@ We will divide the 8-hour seminar into four 2-hour sessions over the course of t
 - **27/06/2024**
   - 09:00 – 10:30: Introduction to Unix Shell Programming
   - 10:30 – 11:00: Break and Q&A
-  - 14:00 – 15:00: Unix Shell Programming pt. 1
-  - 15:00 – 16:00: Hands-on practice
+  - 14:00 – 15:30: Unix Shell Programming: theory
+  - 15:30 – 16:00: Break and Q&A
 - **28/06/2024**
-  - 09:00 – 10:30, Unix Shell Programming pt. 2
+  - 09:00 – 10:30, Unix Shell Programming: hands-on practice
   - 10:30 – 11:00: Break and Q&A
-  - 14:00 – 15:00: Real-world applications
-  - 15:00 – 16:00: Exam
+  - 14:00 – 16:00: Exam
 
 ## Outline
 
@@ -48,10 +47,8 @@ The outline of the seminar is as follows:
    - Loops
    - Functions
 3. **Unix Shell Programming: hands-on practice**
-   - ???
-4. **Real-world applications**
-   - ???
-5. **Exam**
+   - A practical file organizer
+4. **Exam**
    - The exam will consist of 30 multiple-choice questions that you will have to answer in 60 minutes. The questions will be based on the following sessions:
      - Introduction to Unix Shell Programming
      - Unix Shell Programming: theory
