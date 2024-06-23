@@ -1,6 +1,6 @@
 # Introduction to Unix Shell Programming
 
-Unix Shell Programming is a powerful tool that allows you to automate tasks, manage files, and interact with the operating system. This seminar will introduce you to the basics of Unix Shell Programming and provide you with the knowledge and skills to start writing your own shell scripts. To show the power of shell programming, throughout this seminar we will try to only use the Unix shell and a keyboard to fully interact with the system. It will not be easy at first, but hopefully it will provide you with a new perspective on how to interact with your computer.
+Unix Shell Programming is a powerful tool that allows you to automate tasks, manage files, and interact with the operating system. This seminar will introduce you to the basics of Unix Shell Programming and provide you with the knowledge and skills to start writing your own shell scripts. To show the power of shell programming, throughout this seminar we will try to only use the terminal and a keyboard to fully interact with the system. It will not be easy at first, but hopefully it will provide you with a new perspective on how to interact with your computer.
 
 Note: It goes without saying that you can follow this seminar as you see fit. You can use a graphical interface, a mouse, or any other tool you feel comfortable with. The goal is to learn and have fun!
 
@@ -40,9 +40,11 @@ Unix introduced several groundbreaking technical innovations that have had a las
 
 Over the decades, Unix has spawned a multitude of variants and inspired numerous operating systems. Some of the most notable Unix variants include: BSD, Linux, Solaris, and macOS.
 
-Today, Unix and its derivatives play a crucial role in the world of computing. Unix-like systems are prevalent in servers, workstations, and embedded systems. They form the backbone of the internet, powering web servers, database servers, and various networking infrastructure. The principles and practices established by Unix continue to influence modern software development, from cloud computing to mobile applications. In addition, Unix is also used to develop the Operating Systems for mobile devices, like iOS.
+Today, Unix and its derivatives play a crucial role in the world of computing. Unix-like systems are prevalent in servers, workstations, and embedded systems. They form the backbone of the internet, powering web servers, database servers, and various networking infrastructure. The principles and practices established by Unix continue to influence modern software development, from cloud computing to mobile applications.
 
-The Unix philosophy of simplicity, modularity, and reusability has left an indelible mark on the software engineering field. Concepts like version control systems (e.g., Git), containerization (e.g., Docker), and configuration management (e.g., Ansible) all draw inspiration from Unix principles.
+NOTE: Unix is also used in a variety of other devices, in fact it is used to develop the Operating Systems for mobile devices, like iOS.
+
+The Unix philosophy of simplicity, modularity, and reusability has left an indelible mark on the software engineering field. Concepts like version control systems (*e.g.,* Git), containerization (*e.g.,* Docker), and configuration management (*e.g.,* Ansible) all draw inspiration from Unix principles.
 
 ### 1.5 Conclusion
 
@@ -111,6 +113,10 @@ cd ../../
 
 this command moves two directories up from the current directory. You can verify this by running `pwd`. `cd` has several shortcuts that you can use to navigate quickly, we will discuss them as we go along. For the rest of the seminar, we will use the home directory as our working directory. You can always move back to the home directory by running `cd` without any arguments.
 
+NOTE: By now you probably have a lot of old text in your terminal. You can clear it by running `clear` or via a key combination (on macOS, it is `Cmd + K`, on Linux it is `Ctrl + L`).
+
+NOTE: On most terminals, you can use the `Tab` key to autocomplete commands and paths. This is a very useful feature that will save you a lot of typing.
+
 ### 2.3 Listing Directory Contents
 
 Up to now we changed directories assuming we knew where we wanted to go. But what if we want to explore the contents of a directory before moving into it? We can use the `ls` command to list the contents of a directory. For example, to list the contents of the root directory, we can run:
@@ -120,6 +126,8 @@ ls /
 ```
 
 this will show you all the files and directories in the root directory. You can also list the contents of the current directory by running `ls` without any arguments. Again, there are several options that you can use with `ls` to customize the output, we will explore them as we go along. The `ls` command stands for "list."
+
+NOTE: Another cool command to show the contents of a directory is `tree`, which should be available on most Linux installations (otherwise you can always download it via your package manager). `tree` shows the contents of a directory in a tree-like format, making it easier to visualize the directory structure. Beware that by default it will show you all folders and files, so running it on the root directory may be a bit overwhelming. In this cases, we will see how you can show just enough output of any command.
 
 ### 2.4 Creating and Removing Directories
 
@@ -151,7 +159,7 @@ rm -d test
 
 Several options can be used with `rm` and `mkdir` to customize their behavior, we will explore them as we go along.
 
-NOTE: Be careful when using the `rm` command, as it can permanently delete files and directories without moving them to the trash. Always double-check the arguments before running the command.
+NOTE: Be careful when using the `rm` command, as it will permanently delete files and directories without moving them to the trash. Always double-check the arguments before running the command.
 
 ### 2.5 More Options Available, but where!?
 
@@ -218,7 +226,6 @@ This will open the file in `vim`, a powerful and versatile text editor. Learning
 - `Esc`: Exit insert mode (to stop writing text).
 - `:w`: Save the file.
 - `:q`: Quit `vim`.
-- `:wq`: Save and quit `vim`.
 - `h`, `j`, `k`, `l`: Move the cursor left, down, up, and right, respectively when not in insert mode.
 
 If instead you do not feel comfortable using `vim`, you can use any other text editor you are comfortable with, like `nano` or even `VSCode`.
@@ -238,6 +245,7 @@ mkdir test_files_copy && mv test_copy.txt test_files_copy
 ```
 
 NOTE: more often than not, built-in commands create folders and files if they do not exist, so take a little time to experiment with the commands and see what happens.
+
 Lastly, to remove files, you can use the `rm` command followed by the name of the file. For example, to remove the `test_copy.txt` file, you can run:
 
 ```bash
@@ -276,7 +284,7 @@ If you want to redirect the input of a command from a file, you can use the `<` 
 wc -l < test.txt
 ```
 
-There are several options that you can use to customize the behaviour of these operators, like redirect only the `stdout` and not the `stderr`, but we will explore them as we go along.
+There are several options that you can use to customize the behaviour of these operators, like redirect only the `stdout` and not the `stderr`.
 
 #### 2.7.2 Pipes
 
@@ -294,9 +302,11 @@ cat test.txt | wc -l
 
 Although it seems like a trivial example, pipes are incredibly powerful and can be used to create complex command pipelines that perform sophisticated data processing and manipulation. Although we will use them throughout the seminar, we will not go into much detail about them, but I encourage you to explore them on your own.
 
+NOTE: We can solve the issue of too much output we had before using pipes! For example, you can run `tree | less` on the root directory to see the output of the `tree` command page by page, as if it was seen in a text editor.
+
 ### 2.8 Conclusion
 
-Although we could spend the entire seminar talking about Linux commands, we will stop here now. As we progress through this seminar, we will discuss more commands, like the famous `grep`, but we will not go into much detail about them. I encourage to discover them on your own, experiment with them, and see how you can use them to automate tasks and interact with the system.
+Although we could spend the entire seminar talking about Linux commands, we will stop here now. As we progress through this seminar, we will discuss more commands, but we will not go into much detail about them. I encourage you to discover them on your own, experiment with them, and see how you can use them to automate tasks and interact with the system.
 
 ### 2.9 References
 
@@ -345,7 +355,7 @@ Okay, that was a lot of information, let us break it down:
 - The `./` operator is used to run the script directly from the current directory. We are simply specifying the path to the script we want to run (`.` is the current directory). Note that we must specify the path to the script, even if it is in the current directory.
 - The `bash` command is used to run the script using the `bash` interpreter. We are specifying the interpreter to use and the path to the script we want to run.
 
-NOTE: The `chmod` command can be used with different options to change the permissions of a file. We will discuss file permissions in more detail later on.
+NOTE: The `chmod` command can be used with different options to change the permissions of a file. We will see some options later on.
 NOTE: The `bash` command actually calls the bash interpreter, you can call it without any arguments to start an interactive shell session (like the one you are using now if your default shell is `bash`).
 
 ## 4 Conclusion
@@ -357,4 +367,4 @@ Let us recap what we have learned in this first section of the seminar:
 - We discussed redirection and pipes, powerful features of Unix systems.
 - We introduced the basics of shell scripting and created a simple shell script.
 
-Next, we will dive deep into shell scripting, exploring variables, control structures, and functions. We will also discuss more advanced Unix commands and explore real-world applications of shell programming.
+Next, we will dive deep into shell scripting, exploring variables, control structures, and functions. [Click here to continue to the next section](./01_unix_shell_programming_theory.md).

@@ -5,7 +5,7 @@
 </img>
 </p>
 
-This repository holds the material for the seminar on `Unix Shell Programming` organized by the Department of Industrial Engineering of the University of Trento. Use this material to follow along with the seminar and to practice the concepts discussed.
+This repository holds the material for the seminar on `Unix Shell Programming` organised by the Department of Industrial Engineering of the University of Trento. Use this material to follow along with the seminar and to practice the concepts discussed.
 
 ## Pre-requisites
 
@@ -20,13 +20,10 @@ This repository holds the material for the seminar on `Unix Shell Programming` o
 We will divide the 8-hour seminar into four 2-hour sessions over the course of two days. The timetable is as follows:
 
 - **27/06/2024**
-  - 09:00 – 10:30: Introduction to Unix Shell Programming
-  - 10:30 – 11:00: Break and Q&A
-  - 14:00 – 15:30: Unix Shell Programming: theory
-  - 15:30 – 16:00: Break and Q&A
+  - 09:00 – 11:00: Introduction to Unix Shell Programming
+  - 14:00 – 16:00: Unix Shell Programming: theory
 - **28/06/2024**
-  - 09:00 – 10:30, Unix Shell Programming: hands-on practice
-  - 10:30 – 11:00: Break and Q&A
+  - 09:00 – 11:00, Unix Shell Programming: hands-on practice
   - 14:00 – 16:00: Exam
 
 ## Outline
@@ -61,3 +58,7 @@ Many resources are available online to learn Unix shell programming. Here are a 
 - [Start Learning Bash](https://linuxhandbook.com/bash/)
 - [The Shell Scripting Tutorial](https://www.shellscript.sh)
 - [Shell Programming Tutorial](https://www.learnshell.org)
+
+## Let's Get Started
+
+Without further ado, let's dive into the world of Unix shell programming! [Click here to get started](./lectures/00_introduction_to_unix_shell_programming.md).
