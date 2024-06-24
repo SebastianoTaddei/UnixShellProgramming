@@ -60,7 +60,7 @@ You should see the output `Hello, Unix!` printed on the terminal.
 
 NOTE: Contrary to the previous session, we used `chmod u+x` to make the script executable only by the current user. In general, it is a good practice to limit the execution permissions to fit the specific needs of the script.
 
-You have successfully created and run your first shell script!
+You have successfully created and ran your first shell script!
 
 ### 1.1 Adding Scripts to the PATH
 
@@ -100,6 +100,8 @@ and the output will be `Hello, Unix!`.
 To better understand variables, let us create a new script called `variables.sh` and add the following lines:
 
 ```bash
+#!/bin/bash
+
 name="Sebastiano"
 age=26
 
@@ -114,6 +116,7 @@ Arithmetic operations are a fundamental part of programming. In shell scripting,
 
 ```bash
 #!/bin/bash
+
 a=10
 b=5
 echo "a + b  = $((a + b))"
@@ -139,6 +142,7 @@ The easiest way to pass an argument to a shell script is by asking for user inpu
 
 ```bash
 #!/bin/bash
+
 echo "Enter your name:"
 read name
 echo "Hello, $name!"
@@ -150,10 +154,11 @@ This method is useful when you want to interact with the user, but what if you w
 
 ```bash
 #!/bin/bash
+
 echo "Hello, $1!"
 ```
 
-If you can the script like this:
+If you run the script like this:
 
 ```bash
 arguments.sh Sebastiano
@@ -161,7 +166,7 @@ arguments.sh Sebastiano
 
 it will print `Hello, Sebastiano!`.
 
-You can pass more than one argument by separating them with spaces. The arguments are stored in the variables `$1`, `$2`, `$3`, and so on, depending on the position of the argument. There are ways to interact with these arguments, like shifting them to the left or right, we will cover them in the future.
+You can pass more than one argument by separating them with spaces. The arguments are stored in the variables `$1`, `$2`, `$3`, and so on, depending on the position of the argument. There are ways to interact with these arguments, like shifting them to the left or right, I suggest you to look more into it if you are interested.
 
 ## 5 Arrays
 
@@ -270,7 +275,7 @@ else
 fi
 ```
 
-Running this script will print the message `1 is not equal to 0`. WE are not limited to a single condition, we can also use `elif` to add more conditions:
+Running this script will print the message `1 is not equal to 0`. We are not limited to a single condition, we can also use `elif` to add more conditions:
 
 ```bash
 if [ condition ]; then
@@ -339,7 +344,7 @@ esac
 
 Running this script will print the message `1 is equal to 1`. You can use the `case` statement to match strings as well as integers and regular expressions.
 
-Several test conditions exist in `bast`, such as:
+Several test conditions exist in `bash`, such as:
 
 - `-eq` for equality
 - `-ne` for inequality
@@ -353,7 +358,7 @@ Fortunately, you do not have to memorize all of them, you can use the `man test`
 
 ## 7 Loops
 
-Loops are a construct that allows you to execute a block of code multiple times. In `bash`, we have three types of loops: `for`, `while`, and `until`. Let us start with the `for` loop. We have two types of `for` loops in `bash`: the C-style and the list/range-style (similar to `Python`). The general syntax of a C-style `for` loop is as follows:
+Loops that allows you to execute a block of code multiple times. In `bash`, we have three types of loops: `for`, `while`, and `until`. Let us start with the `for` loop. We have two types of `for` loops in `bash`: the C-style and the list/range-style (similar to `Python`). The general syntax of a C-style `for` loop is as follows:
 
 ```bash
 for (( initialization; condition; increment )); do
@@ -433,7 +438,7 @@ until [ $i -ge 5 ]; do
 done
 ```
 
-Running this script will print the numbers from 0 to 4. The `-ge` operator is used to compare two values for greater than or equal to. The `(( i++ ))` syntax is used to increment the value of `i` by 1.
+Running this script will print the numbers from 0 to 4. The `-ge` operator is used to compare two values for greater than or equal to.
 
 Whilst the `for` loop is useful when you know the number of iterations beforehand, the `while` and `until` loops are useful when you do not know the number of iterations beforehand. Be careful when using `while` and `until` loops, as they can lead to infinite loops if the condition is never met.
 
@@ -467,7 +472,7 @@ hello_world () {
 hello_world
 ```
 
-Running this script will print the message `Hello, World!`. You can pass arguments to a function just like you pass arguments to a script. The arguments passed to the function are stored in the variables `$1`, `$2`, `$3`, and so on. Let us modify the `functions.sh` script to pass an argument
+Running this script will print the message `Hello, World!`. You can pass arguments to a function just like you would pass arguments to a script. The arguments passed to the function are stored in the variables `$1`, `$2`, `$3`, and so on. Let us modify the `functions.sh` script to pass an argument
 
 ```bash
 #!/bin/bash
@@ -479,7 +484,7 @@ hello () {
 hello "Unix"
 ```
 
-Running this script will print the message `Hello, Unix!`. Note that even though the syntax is similar to passing arguments to a script, the arguments passed to a function are stored in different variables. Therefore, let us modify the `functions.sh` script to print the value of the argument
+Running this script will print the message `Hello, Unix!`. Note that even though the syntax is similar to passing arguments to a script, the arguments passed to a function are stored in different variables local to the function. Therefore, let us modify the `functions.sh` script to print the value of the argument
 
 ```bash
 #!/bin/bash
@@ -492,7 +497,7 @@ hello "Unix"
 echo "Argument: $1"
 ```
 
-Running this script with a single argument like `./functions.sh Linux` will print the message `Hello, Unix!` and the value of the argument `Linux`.
+Running this script with a single argument like `./functions.sh Linux` will print the message `Hello, Unix!` and the value of the argument, `Linux`.
 
 By default, `bash` functions return the exit status of the last command executed in the function. You can also explicitly return a value from a function using the `return` keyword. Let us modify the `functions.sh` script to return a value
 
@@ -525,11 +530,12 @@ hello () {
 }
 
 hello
+echo "The global variable did not change: $name2"
 ```
 
-By running this script we can see that even though the global variable `name2` is defined, the local variable `name2` takes precedence. The output will be `Local variable: Shell` and `Global variable: Unix`.
+By running this script we can see that even though the global variable `name2` is defined, the local variable `name2` takes precedence. The output will be `Local variable: Shell`, `Global variable: Unix`, and `The global variable did not change: Linux`.
 
-By this point I think you can see a pattern with functions in `bash`, they behave pretty much exactly like scripts. In fact, you could call other scripts within another script and the syntax and behaviour would be basically the same.
+By this point I think you can see a pattern with functions in `bash`: they behave pretty much exactly like scripts. In fact, you could call other scripts within another script and the syntax and behaviour would be basically the same.
 
 Lastly, functions in `bash` support recursion. Recursive functions are functions that call themselves. Let us create a new script called `recursion.sh` and add the following lines:
 
@@ -551,7 +557,7 @@ This function calculates the factorial of a number using recursion. Running this
 
 ## 9 Conclusion
 
-After looking at all these simple examples, I believe that if you have any prior programming experience with languages like `C/C++`, `Python`, `Rust`, etc., you might be wondering "The syntax of `bash` looks a little clunky, doing solving classical problems (*e.g.,* network programming, scientific computing) looks horrible, and it does not seem as powerful as other languages, why should I learn it?". The answer to that is simple: `bash` is not meant to be like other programming languages, it does not try to solve those problems. `bash` is meant to be the glue between other processes, interacting with your system and automating tasks. You can use other languages to solve this problems, `Python` has a first-party library to call processes on your system, but you will find that it feels unnatural. That is why, after this theoretical part of Unix Shell Programming, we will move to the practical part, where we will see how to use `bash` to do what it does best: interacting with your system.
+After looking at all these simple examples, I believe that if you have any prior programming experience with languages like `C/C++`, `Python`, `Rust`, etc., you might be wondering "The syntax of `bash` looks a little clunky, the idea of solving classical problems (*e.g.,* network programming, scientific computing) looks horrible, and it does not seem as powerful as other languages, why should I learn it?". The answer to that is simple: `bash` is not meant to be like other programming languages, it does not try to solve those problems. `bash` is meant to be the glue between other processes, interacting with your system and automating tasks. You can use other languages to solve this problems, `Python` has a first-party library to call processes on your system, but you will find that it feels unnatural. That is why, after this theoretical part of Unix Shell Programming, we will move to the practical part, where we will see how to use `bash` to do what it does best: interacting with your system.
 
 ## 10 References
 
