@@ -12,6 +12,9 @@ This repository holds the material for the seminar on `Programmazione Shell per 
 - A Unix-like operating system (Linux, macOS, WSL on Windows).
 - A terminal emulator (e.g., `bash`, `zsh`, `fish`). We will use `bash` in this seminar, but the concepts are applicable to other shells as well.
 - A text editor (e.g., `vim`, `nano`, `gedit`, `sublime`, `vscode`). We will use `vim` in this seminar, but you can use any text editor you are comfortable with.
+
+In addition, it would be best (but not required) to have the following:
+
 - Basic knowledge of the Unix command line. We will quickly review the basics, but it is recommended to have some prior experience with the Unix command line.
 - Basic knowledge of programming concepts. We will quickly review the basics, but it is recommended to have some prior experience with programming.
 
