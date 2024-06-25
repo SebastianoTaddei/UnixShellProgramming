@@ -5,7 +5,7 @@
 </img>
 </p>
 
-This repository holds the material for the seminar on `Programmazione Shell per sistemi Unix` organised by the Department of Industrial Engineering of the University of Trento. Use this material to follow along with the seminar and to practice the concepts discussed.
+This repository holds the material for the seminar on `Programmazione Shell per Sistemi Unix` organised by the Department of Industrial Engineering of the University of Trento. Use this material to follow along with the seminar and to practice the concepts discussed.
 
 ## Pre-requisites
 
