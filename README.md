@@ -5,7 +5,7 @@
 </img>
 </p>
 
-This repository holds the material for the seminar on `Unix Shell Programming` organised by the Department of Industrial Engineering of the University of Trento. Use this material to follow along with the seminar and to practice the concepts discussed.
+This repository holds the material for the seminar on `Programmazione Shell per sistemi Unix` organised by the Department of Industrial Engineering of the University of Trento. Use this material to follow along with the seminar and to practice the concepts discussed.
 
 ## Pre-requisites
 
@@ -23,7 +23,7 @@ We will divide the 8-hour seminar into four 2-hour sessions over the course of t
   - 09:00 – 11:00: Introduction to Unix Shell Programming
   - 14:00 – 16:00: Unix Shell Programming: theory
 - **28/06/2024**
-  - 09:00 – 11:00, Unix Shell Programming: hands-on practice
+  - 09:00 – 11:00: Unix Shell Programming: hands-on practice
   - 14:00 – 16:00: Exam
 
 ## Outline
