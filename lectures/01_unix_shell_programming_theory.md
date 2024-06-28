@@ -208,7 +208,9 @@ elements+=(6)
 echo "All elements: ${elements[*]}"
 ```
 
-Running this script will print all the elements of the array, plus the new element we appended to the end. To delete an element from an array, you can use the `unset` command. Let us modify the `arrays.sh` script to delete an element:
+Running this script will print all the elements of the array, plus the new element we appended to the end. Another notation to access all elements of an array is the `@` operator. The difference between `*` and `@` is that `*` will treat the entire array as a single element, while `@` will treat each element of the array as a separate element. This distinction is only relevant when the array is enclosed in double quotes.
+
+To delete an element from an array, you can use the `unset` command. Let us modify the `arrays.sh` script to delete an element:
 
 ```bash
 #!/bin/bash
@@ -222,7 +224,7 @@ echo "All elements: ${elements[*]}"
 
 Running this script will first print the original array, and then the same array without the element we deleted from it. If you call `unset` directly on the array without specifying an index it will delete the entire array.
 
-Lastly, arrays in bash are not typed, meaning they can store heterogeneous data types. You can store strings, integers, and even other arrays in a single array. Let us create a new script called `arrays_heterogeneous.sh` and add the following lines:
+Arrays in bash are not typed, meaning they can store heterogeneous data types. You can store strings, integers, and even other arrays in a single array. Let us create a new script called `arrays_heterogeneous.sh` and add the following lines:
 
 ```bash
 #!/bin/bash
@@ -231,7 +233,19 @@ heterogeneous_elements=(1 "two" 3 "four" 5)
 echo "Heterogeneous array: ${heterogeneous_elements[*]}"
 ```
 
-Running this script will print the heterogeneous array. You can access the elements of the array using the index of the element, as usual.
+Running this script will print the heterogeneous array. You can access the elements of the array using the index of the element, as usual. In addition, arrays can also be associative, meaning they can store key-value pairs. Let us create a new script called `arrays_associative.sh` and add the following lines:
+
+```bash
+#!/bin/bash
+
+associative_elements=([name]="Sebastiano" [age]=26)
+echo "Name: ${associative_elements[name]}"
+echo "Age: ${associative_elements[age]}"
+```
+
+Running this script will print the name and age of the associative array. You can access the elements of the associative array using the key of the element. Associative arrays are useful when you want to store key-value pairs, like a dictionary.
+
+Lastly, there are two more operators that can be used with arrays. The `#` operator returns the number of elements in the array, while the `!` operator allows us to get the indices of the array elements.
 
 ## 6 Conditional Statements
 
